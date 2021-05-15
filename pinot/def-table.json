@@ -1,0 +1,56 @@
+{
+  "tableName": "poc",
+  "tableType": "REALTIME",
+  "segmentsConfig": {
+    "timeColumnName": "ts_ms",
+    "timeType": "MILLISECONDS",
+    "schemaName": "poc",
+    "replicasPerPartition": "1"
+  },
+  "tenants": {},
+  "fieldConfigList":[
+  ],
+  "tableIndexConfig": {
+    "noDictionaryColumns": [
+    ],
+    "loadMode": "MMAP",
+    "streamConfigs": {
+      "streamType": "kafka",
+      "stream.kafka.consumer.type": "simple",
+      "stream.kafka.topic.name": "poc.topic",
+      "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
+      "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka20.KafkaConsumerFactory",
+      "stream.kafka.broker.list": "PLAINTEXT://kafka:9092",
+      "realtime.segment.flush.threshold.time": "12h",
+      "realtime.segment.flush.threshold.size": "100000",
+      "stream.kafka.consumer.prop.auto.offset.reset": "smallest"
+    }
+  },
+  "metadata": {
+    "customConfigs": {}
+  },
+  "ingestionConfig":{
+    "transformConfigs":[
+      {
+        "columnName": "incoming_id",
+        "transformFunction": "jsonFormat(incomingId)"
+      },
+      {
+        "columnName": "person_name",
+        "transformFunction": "jsonFormat(name)"
+      },
+      {
+        "columnName": "person_surname",
+        "transformFunction": "jsonFormat(surname)"
+      },
+      {
+        "columnName": "bank_account_id",
+        "transformFunction": "jsonFormat(bankAccountId)"
+      },
+      {
+        "columnName": "incoming_amount",
+        "transformFunction": "jsonFormat(incomingAmount)"
+      }
+    ]
+  }
+}

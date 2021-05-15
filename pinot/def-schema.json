@@ -1,0 +1,38 @@
+{
+  "schemaName": "poc",
+  "dimensionFieldSpecs": [
+    {
+      "name": "incoming_id",
+      "dataType": "STRING",
+      "defaultNullValue": ""
+    },
+    {
+      "name": "person_name",
+      "dataType": "STRING",
+      "defaultNullValue": ""
+    },
+    {
+      "name": "person_surname",
+      "dataType": "STRING",
+      "defaultNullValue": ""
+    },
+    {
+      "name": "bank_account_id",
+      "dataType": "STRING",
+      "defaultNullValue": ""
+    },
+    {
+      "name": "incoming_amount",
+      "dataType": "STRING",
+      "defaultNullValue": ""
+    }
+  ],
+  "metricFieldSpecs": [
+  ],
+  "dateTimeFieldSpecs": [{
+    "name": "ts_ms",
+    "dataType": "LONG",
+    "format" : "1:MILLISECONDS:EPOCH",
+    "granularity": "1:MILLISECONDS"
+  }]
+}
