@@ -1,4 +1,4 @@
-# Using Apache Pinot as a Kafka Consumer and Data Storage for Fast On-the-Fly Aggregations
+# Using Apache Pinot as a Kafka Consumer and Datastore for Fast On-the-Fly Aggregations
 
 This is a PoC I prepared to demonstrate positioning Apache Pinot as a Kafka consumer and datastore to enable fast on-the-fly aggregations.
 
