@@ -1,6 +1,6 @@
-# Using Apache Pinot as a Kafka Consumer for 
+# Using Apache Pinot as a Kafka Consumer and Data Storage for Fast On-the-Fly Aggregations
 
-This is a PoC I prepared to demonstrate CDC (change data capture).
+This is a PoC I prepared to demonstrate positioning Apache Pinot as a Kafka consumer and data storage to enable fast on-the-fly aggregations.
 
 [Here]() is my post about this PoC.
 
