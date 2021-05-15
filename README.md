@@ -6,7 +6,7 @@ This is a PoC I prepared to demonstrate positioning Apache Pinot as a Kafka cons
 
 ### The Ingredients
 
-- Source database
+- Producer
 - Message broker
 - Destination (consumer)
 
